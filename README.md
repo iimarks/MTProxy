@@ -5,7 +5,7 @@
 # yum -y install wget gcc gcc-c++ flex bison make bind bind-libs bind-utils openssl openssl-devel perl quota libaio libcom_err-devel libcurl-devel tar diffutils nano dbus.x86_64 db4-devel cyrus-sasl-devel perl-ExtUtils-Embed.x86_64 cpan
 ```
 
-Check Openssl version:
+Check OpenSSL version:
 ```
 # openssl version
 OpenSSL 1.0.2k-fips  26 Jan 2017
