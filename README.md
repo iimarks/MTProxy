@@ -104,7 +104,7 @@ where:
 - also feel free to check out other options using ```objs/bin/mtproto-proxy -help```
 
 
-## Register your proxy and set promoted channel:  
+## Register your proxy and set promotion channel:  
 1. go to [@MTProxybot](https://t.me/MTProxybot) bot and start it.
 2. send */newproxy* commond.
 3. send your server ip (or domain/subdomain)  and proxy port like ==> *host:port*
