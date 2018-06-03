@@ -27,7 +27,7 @@ CentOS/RHEL 7.x:
 OpenSSL 1.0.2k-fips  26 Jan 2017
 ```
 
-if version is below 1.1 (if is 1.1 or higher jump to *Step 2*):
+if version is below 1.1 (if is 1.1 or higher jump to [Step 2](https://github.com/wecanco/MTProxy#step-2)):
 ```
 # sudo yum install libtool perl-core zlib-devel -y
 # wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_0g.tar.gz
