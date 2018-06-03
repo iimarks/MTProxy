@@ -155,6 +155,3 @@ where:
 ```
 # pkill -u mtproxy && pkill screen
 ```
-
-
-[@WeCanGP](https://t.me/WeCanGP)
