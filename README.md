@@ -16,12 +16,12 @@ CentOS/RHEL 7.x:
 ```
 
 
-then:
+###### 2. Install Required Packages
 ```
 # yum -y install wget gcc gcc-c++ flex bison make bind bind-libs bind-utils openssl openssl-devel perl quota libaio libcom_err-devel libcurl-devel tar diffutils nano dbus.x86_64 db4-devel cyrus-sasl-devel perl-ExtUtils-Embed.x86_64 cpan vim-common
 ```
 
-Check OpenSSL version:
+###### 3. Check OpenSSL version:
 ```
 # openssl version
 OpenSSL 1.0.2k-fips  26 Jan 2017
@@ -86,6 +86,8 @@ then:
 ```
 
 ## Step 2:
+
+###### 1. Download MTProxy and Make it:
 ```
 # yum install git
 # cd ~
@@ -96,13 +98,13 @@ then:
 
 Your binary will be *objs/bin/mtproto-proxy*
 
-then:
+###### 2. Download MTProxy Config files:
 ```
 # curl -s https://core.telegram.org/getProxySecret -o proxy-secret
 # curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf
 ```
 
-now Generate a secret to be used by users to connect to your proxy:
+###### 3. Now Generate a secret to be used by users to connect to your proxy:
 ```
 # head -c 16 /dev/urandom | xxd -ps
 ```
