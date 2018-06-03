@@ -44,7 +44,9 @@ OpenSSL 1.1.0h  27 Mar 2018
 ```
 
 then:
-```# nano Makefile```
+```
+# nano Makefile
+```
 replace these lines in **Makefile** file:
 ```
 CFLAGS: -I/usr/local/openssl/include
