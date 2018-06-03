@@ -1,7 +1,7 @@
 ###### Centos:
 
   Step 1:
-    # openssl version
+    ```# openssl version```
     **OpenSSL 1.0.2k-fips  26 Jan 2017**
     if version is below 1.1:
       # sudo yum install libtool perl-core zlib-devel -y
