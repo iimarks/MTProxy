@@ -131,7 +131,7 @@ where:
 - 1 is the number of workers. You can increase the number of workers, if you have a powerful server
 - also feel free to check out other options using ```objs/bin/mtproto-proxy -help```
 
-###### Don't Forget [open port](https://www.google.com/search?q=open+port+linux+firewall&ie=utf-8&oe=utf-8&client=firefox-b-ab) 444 on your server firewall
+######  :exclamation: Don't Forget [open port](https://www.google.com/search?q=open+port+linux+firewall&ie=utf-8&oe=utf-8&client=firefox-b-ab) 444 on your server firewall
 
 ## Register your proxy and set promotion channel:  
 1. go to [@MTProxybot](https://t.me/MTProxybot) bot and start it.
