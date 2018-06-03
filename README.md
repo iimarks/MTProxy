@@ -135,6 +135,7 @@ i want run MTProxy on port *444* with my *secret* key and set promotion channel:
 ```
 or 
 ```
+# screen
 # cd ~/MTProxy/objs/bin && ./mtproto-proxy -u mtproxy -p 8888 -H 444 -S <secret> -P  <tag> --aes-pwd proxy-secret proxy-multi.conf -M 10 -C 1
 ```
 
