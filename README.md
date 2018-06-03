@@ -2,7 +2,7 @@
 
 ## Step 1:
 ```
-# openssl version\n
+# openssl version
 OpenSSL 1.0.2k-fips  26 Jan 2017
 ```
 
