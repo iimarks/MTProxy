@@ -1,25 +1,26 @@
 Centos:
 
-  Step 1:
-    # openssl version
-    **OpenSSL 1.0.2k-fips  26 Jan 2017**
-    if version is below 1.1:
-      # sudo yum install libtool perl-core zlib-devel -y
+  **Step 1:**
+    ```# openssl version```
+    OpenSSL 1.0.2k-fips  26 Jan 2017
+    
+   if version is below 1.1:
+      ```# sudo yum install libtool perl-core zlib-devel -y
       # curl -O -L https://github.com/openssl/openssl/archive/OpenSSL_1_1_0g.tar.gz
       # tar -zxvf OpenSSL_1_1_0g.tar.gz
       # cd openssl-OpenSSL_1_1_0g
       # ./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl shared zlib
       # make
       # make test
-      # sudo make install
+      # sudo make install```
 
-      # nano /etc/profile.d/openssl.sh
-      insert this code and save(ctrl+x):
-      # /etc/profile.d/openssl.sh
-      pathmunge /usr/local/openssl/bin
+      ```# nano /etc/profile.d/openssl.sh```
+      **insert this code and save(ctrl+x):**
+      ```# /etc/profile.d/openssl.sh
+      pathmunge /usr/local/openssl/bin```
 
-      # nano /etc/ld.so.conf.d/openssl-1.1.0g.conf
-      insert this code and save(ctrl+x):
+      ```# nano /etc/ld.so.conf.d/openssl-1.1.0g.conf```
+      ***insert this code and save(ctrl+x):***
       # /etc/ld.so/conf.d/openssl-1.1.0g.conf
       /usr/local/openssl/lib
 
