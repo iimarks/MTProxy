@@ -1,4 +1,54 @@
-to build, simply run 'make'. Your binary will be objs/bin/mtproto-proxy
+Centos:
+
+  Step 1:
+    # openssl version
+    OpenSSL 1.0.2k-fips  26 Jan 2017
+    if version is below 1.1:
+      # sudo yum install libtool perl-core zlib-devel -y
+      # curl -O -L https://github.com/openssl/openssl/archive/OpenSSL_1_1_0g.tar.gz
+      # tar -zxvf OpenSSL_1_1_0g.tar.gz
+      # cd openssl-OpenSSL_1_1_0g
+      # ./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl shared zlib
+      # make
+      # make test
+      # sudo make install
+
+      # nano /etc/profile.d/openssl.sh
+      insert this code and save(ctrl+x):
+      # /etc/profile.d/openssl.sh
+      pathmunge /usr/local/openssl/bin
+
+      # nano /etc/ld.so.conf.d/openssl-1.1.0g.conf
+      insert this code and save(ctrl+x):
+      # /etc/ld.so/conf.d/openssl-1.1.0g.conf
+      /usr/local/openssl/lib
+
+      # sudo ldconfig -v
+      # openssl version
+      OpenSSL 1.1.0h  27 Mar 2018
+
+      replace these lines in Makefile file:
+      # nano Makefile
+
+      CFLAGS: -I/usr/local/openssl/include
+      LDFLAGS: -L /usr/local/openssl/lib
+
+      to:
+
+      CFLAGS = -I/usr/local/openssl/include -m64 -O3 -std=gnu11 -Wall -mpclmul -march=core2 -mfpmath=sse -mssse3 -fno-strict-aliasing -fno-strict-overflow -fwrapv -DAES=1 -DCOMMIT=\"${COMMIT}\" -D_GNU_SOURCE=1 -D_FILE_OFFSET_BITS=64
+      LDFLAGS = -L /usr/local/openssl/lib -m64 -ggdb -rdynamic -lm -lrt -lcrypto -lz -lpthread -lcrypto
+
+      # make clean
+      # make
+
+  Step 2:
+    # yum install git
+    # cd ~
+    # git clone https://github.com/wecanco/MTProxy.git
+    # cd MTProxy
+    # make
+
+ Your binary will be objs/bin/mtproto-proxy
 
 to run mtproto-proxy:
   1. Obtain a secret, used to connect to telegram servers. 
