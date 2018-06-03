@@ -1,6 +1,22 @@
 # Install on Centos 6,7:
 
 ## Step 1:
+
+###### 1. Update YUM repositories:
+CentOS/RHEL 6.x:
+```
+# yum install epel-release
+# rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm
+```
+
+CentOS/RHEL 7.x:
+```
+# yum install epel-release
+# rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+```
+
+
+then:
 ```
 # yum -y install wget gcc gcc-c++ flex bison make bind bind-libs bind-utils openssl openssl-devel perl quota libaio libcom_err-devel libcurl-devel tar diffutils nano dbus.x86_64 db4-devel cyrus-sasl-devel perl-ExtUtils-Embed.x86_64 cpan vim-common
 ```
