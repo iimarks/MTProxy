@@ -39,33 +39,37 @@ if version is below 1.1 (if is 1.1 or higher jump to *Step 2*):
 # sudo make install
 ```
 
-then:
+Create *openssl.sh* File:
 ```
 # nano /etc/profile.d/openssl.sh
 ```
-insert this code and save(ctrl+x):
+and insert this code and save(ctrl+x):
 ```
 # /etc/profile.d/openssl.sh
 pathmunge /usr/local/openssl/bin
 ```
-then:
+Create *openssl-1.1.0g.conf* File:
 ```
 # nano /etc/ld.so.conf.d/openssl-1.1.0g.conf
 ```
-insert this code and save(ctrl+x):
+and insert this code and save(ctrl+x):
 ```
 # /etc/ld.so/conf.d/openssl-1.1.0g.conf
 /usr/local/openssl/lib
 ```
 
-then:
+Creates the necessary links and cache to the most recent shared libraries:
 ```
 # sudo ldconfig -v
+```
+
+Now Check OpenSSL version:
+```
 # openssl version
 OpenSSL 1.1.0h  27 Mar 2018
 ```
 
-then:
+then edit *Makefile* file:
 ```
 # nano Makefile
 ```
@@ -79,7 +83,7 @@ to:
 CFLAGS = -I/usr/local/openssl/include -m64 -O3 -std=gnu11 -Wall -mpclmul -march=core2 -mfpmath=sse -mssse3 -fno-strict-aliasing -fno-strict-overflow -fwrapv -DAES=1 -DCOMMIT=\"${COMMIT}\" -D_GNU_SOURCE=1 -D_FILE_OFFSET_BITS=64
 LDFLAGS = -L /usr/local/openssl/lib -m64 -ggdb -rdynamic -lm -lrt -lcrypto -lz -lpthread -lcrypto
 ```
-then:
+then make it:
 ```
 # make clean
 # make
