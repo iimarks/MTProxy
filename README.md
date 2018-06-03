@@ -1,4 +1,4 @@
-# Install on Centos 6.x & 7.x:
+# Install MTProxy on Centos 6.x & 7.x:
 
 ## Step 1:
 
