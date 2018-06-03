@@ -18,6 +18,7 @@ if version is below 1.1 (if is 1.1 or higher jump to *Step 2*):
 # sudo make install
 ```
 
+then:
 ```
 # nano /etc/profile.d/openssl.sh
 ```
