@@ -3,8 +3,8 @@ Centos:
   **Step 1:**
     ```
     # openssl version
+    OpenSSL 1.0.2k-fips  26 Jan 2017
     ```
-OpenSSL 1.0.2k-fips  26 Jan 2017
  
    if version is below 1.1:
       ```
