@@ -9,7 +9,7 @@ OpenSSL 1.0.2k-fips  26 Jan 2017
 if version is below 1.1 (if is 1.1 or higher jump to *Step 2*):
 ```
 # sudo yum install libtool perl-core zlib-devel -y
-# curl -O -L https://github.com/openssl/openssl/archive/OpenSSL_1_1_0g.tar.gz
+# wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_0g.tar.gz
 # tar -zxvf OpenSSL_1_1_0g.tar.gz
 # cd openssl-OpenSSL_1_1_0g
 # ./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl shared zlib
