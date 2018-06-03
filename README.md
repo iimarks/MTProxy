@@ -76,22 +76,22 @@ Your binary will be *objs/bin/mtproto-proxy*
 
 then:
 ```
-curl -s https://core.telegram.org/getProxySecret -o proxy-secret
-curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf
+# curl -s https://core.telegram.org/getProxySecret -o proxy-secret
+# curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf
 ```
 
 now Generate a secret to be used by users to connect to your proxy:
 ```
-head -c 16 /dev/urandom | xxd -ps
+# head -c 16 /dev/urandom | xxd -ps
 ```
 
 
 ## Run mtproto-proxy
 ```
-screen
-cd ~
-cd MTProxy
-objs/bin/mtproto-proxy -u nobody -p 9990 -H 1400 -S <secret> --aes-pwd proxy-secret proxy-multi.conf -M 1
+# screen
+# cd ~
+# cd MTProxy
+# objs/bin/mtproto-proxy -u nobody -p 9990 -H 1400 -S <secret> --aes-pwd proxy-secret proxy-multi.conf -M 1
 ```
 
 where:
